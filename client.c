@@ -263,7 +263,7 @@ void* recv_thread(void* p){
 			return -1;
 		}
         buf[strlen(buf)]='\0';
-		else if(strncmp(buf,"CONNECT ",8)==0)//you are invited
+		if(strncmp(buf,"CONNECT ",8)==0)//you are invited
 		{
             char opponame[1024],useless[30];
             char oldpponame[1024],oldfd=oppofd;
